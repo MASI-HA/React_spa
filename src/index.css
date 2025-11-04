@@ -1012,3 +1012,169 @@ html, body {
     min-height: 44px;
   }
 }
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+--color-info: #0dcaf0;
+--color-danger: #dc3545;
+--color-light: #f8f9fa;
+--color-dark-primary: #000000;
+--color-dark-secondary: #212529;
+
+--blur-base: 7px;
+--glass-opacity-low: 0.05;
+--glass-opacity-medium: 0.15;
+--glass-bg-base: rgba(10, 10, 20, 0.4); /* تیره تر شد */
+--navbar-bg: rgba(10, 10, 20, 0.85); /* کمی شفافیت بیشتر برای فوکوس بهتر */
+
+
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+p, span, div, strong, a,
+.card-body, .lead,
+.form-control, .btn, .swal2-popup {
+font-family: 'Rajdhani', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-weight: 700;
+}
+
+.font-family-rajdhani {
+font-family: 'Rajdhani', sans-serif !important;
+}
+
+/* ========================================================= /
+/ 1. NAVBAR & HEADER STYLES (Focus on Responsiveness) /
+/ ========================================================= */
+
+.header-custom-style {
+background: var(--navbar-bg) !important;
+backdrop-filter: blur(var(--blur-base));
+-webkit-backdrop-filter: blur(var(--blur-base));
+}
+
+.nav-link {
+color: rgba(255, 255, 255, 0.8) !important;
+text-shadow: 0 0 3px rgba(13, 202, 240, 0.1);
+padding: 0.5rem 1rem;
+transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+color: var(--color-info) !important;
+}
+
+/* 💡 استایل برای لینک فعال (NavLink active) 💡 /
+.active-link-custom {
+color: var(--color-info) !important;
+border-bottom: 2px solid var(--color-info);
+border-radius: 0; / حذف border-radius برای زیر خط /
+text-shadow: 0 0 7px rgba(13, 202, 240, 0.5);
+padding-bottom: calc(0.5rem - 2px); / جبران ارتفاع border-bottom */
+
+
+/* 🚨 استایل‌های موبایل (Hamburger Menu) 🚨 /
+@media (max-width: 991.98px) {
+.navbar-collapse {
+/ برای نمایش منو به صورت فول width در موبایل /
+background-color: rgba(0, 0, 0, 0.9);
+border-top: 1px solid rgba(13, 202, 240, 0.2);
+padding: 1rem 0.5rem;
+position: absolute;
+top: 100%; / زیر navbar قرار می‌گیرد /
+left: 0;
+right: 0;
+z-index: 1020; / بالاتر از محتوای عادی */
+
+
+.navbar-nav {
+    /* لینک‌ها زیر هم قرار می‌گیرند */
+    align-items: flex-start;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-link {
+    /* لینک‌ها بزرگتر و کلیک‌پذیرتر در موبایل */
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.active-link-custom {
+    border-bottom: 1px solid var(--color-info);
+}
+
+/* دکمه‌های Login/Logout در موبایل در بالا سمت راست می‌مانند */
+
+
+
+
+/* استایل دکمه‌های Auth برای موبایل */
+.btn-sm {
+font-size: 0.8rem;
+padding: 0.35rem 0.8rem;
+}
+
+.btn-logout-custom {
+background-color: var(--color-danger) !important;
+border-color: var(--color-danger) !important;
+}
+
+/* ========================================================= /
+/ 2. GENERAL ELEMENTS /
+/ ========================================================= */
+
+.card-glass-dark {
+background: var(--glass-bg-base) !important;
+backdrop-filter: blur(var(--blur-base));
+-webkit-backdrop-filter: blur(var(--blur-base));
+border: 1px solid rgba(13, 202, 240, 0.2);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+border-radius: 12px;
+}
+
+.glass-shadow-glow {
+box-shadow: 0 0 20px rgba(13, 202, 240, 0.1);
+}
+
+.text-info-glow {
+text-shadow: 0 0 5px rgba(13, 202, 240, 0.4);
+}
+
+/* ... (بقیه استایل‌های عمومی شما) ... */
+
+.btn-home-link {
+background: transparent;
+color: var(--color-info) !important;
+border: 1px solid rgba(13, 202, 240, 0.4);
+padding: 0.6rem 2rem;
+border-radius: 4px;
+font-size: 1rem;
+font-weight: 600;
+text-shadow: 0 0 3px rgba(13, 202, 240, 0.2);
+transition: all 0.3s ease;
+}
+
+.btn-home-link:hover {
+background: rgba(13, 202, 240, var(--glass-opacity-low));
+color: var(--color-info) !important;
+border-color: var(--color-info);
+box-shadow: 0 0 15px rgba(13, 202, 240, 0.4);
+transform: translateY(-2px);
+}
+
+.shadow-info-glow:hover {
+border-color: #1b3b41 !important;
+color: #0e373f !important;
+box-shadow: none !important;
+}
+
+.glass-btn-sm {
+padding: 0.5rem 1rem !important;
+font-size: 0.85rem !important;
+}
