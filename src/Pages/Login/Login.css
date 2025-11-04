@@ -1,0 +1,192 @@
+
+/* ========================================================================= */
+/* 1. GLOBAL VARIABLES & FONT SETUP 🚀 */
+/* ========================================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+
+:root {
+    /* 🎨 Theme Colors */
+    --color-info: #0dcaf0;
+    --color-danger: #dc3545;
+    --color-light: #f8f9fa;
+    --color-dark-primary: #000000;
+    --color-dark-secondary: #212529;
+    --color-dark-tertiary: #1a1a1a; 
+
+    /* 💧 Glassmorphism Variables */
+    --blur-base: 12px;
+}
+
+/* ✍️ Rajdhani font application */
+body, 
+h1, h2, h3, h4, h5, h6, 
+p, span, div, strong, a, 
+.card-body, .lead,
+.form-control, .btn, .swal2-popup {
+    font-family: 'Rajdhani', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+
+html, body, #root { 
+    min-height: 100vh; 
+    width: 100%;
+    margin: 0; 
+    padding: 0; 
+    overflow-x: hidden; 
+}
+
+body {
+    background-image: 
+        radial-gradient(
+            circle, 
+            rgba(13, 202, 240, 0.08) 1px, 
+            transparent 1px
+        ),
+        linear-gradient(
+            135deg, 
+            var(--color-dark-secondary),
+            var(--color-dark-primary)
+        );
+
+    background-size: 20px 20px, auto;
+    background-attachment: scroll, fixed;
+    color: var(--color-light);
+}
+
+/* ========================================================================= */
+/* 7. LOGIN PAGE - FIXED STYLES  🌟 */
+/* ========================================================================= */
+
+.login-container-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.login-final-card {
+    position: relative; 
+    z-index: 10;
+    
+    /* Glassmorphism و Blur  */
+    background: rgba(20, 20, 30, 0.7); 
+    backdrop-filter: blur(var(--blur-base)); 
+    -webkit-backdrop-filter: blur(var(--blur-base));
+    
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); 
+    transition: all 0.3s ease-in-out;
+    
+    border: 3px solid transparent; 
+    
+    background-image: 
+        linear-gradient(rgba(20, 20, 30, 0.7), rgba(20, 20, 30, 0.7)), 
+        repeating-linear-gradient(
+            45deg, 
+            rgba(13, 202, 240, 0.5) 0%, 
+            rgba(13, 202, 240, 0.5) 10%, 
+            transparent 10%, 
+            transparent 20%
+        ); 
+        
+    background-origin: border-box; 
+    background-clip: padding-box, border-box; 
+    background-size: 300% 300%; 
+    
+    animation: dashBorderRun 10s linear infinite; 
+    
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+}
+
+@keyframes dashBorderRun {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 300% 300%; }
+}
+
+.login-final-card .form-control {
+    background: rgba(0, 0, 0, 0.65) !important; 
+    border: 1px solid rgba(13, 202, 240, 0.3) !important;
+    color: var(--color-light) !important;
+}
+
+.login-final-card .form-control:focus {
+    box-shadow: 0 0 0 0.15rem rgba(13, 202, 240, 0.4) !important; 
+    border-color: var(--color-info) !important;
+    background: rgba(0, 0, 0, 0.8) !important; 
+}
+
+.input-icon-attractive {
+    position: absolute;
+    left: 15px; 
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: var(--color-info); 
+    text-shadow: 0 0 3px rgba(13, 202, 240, 0.05); 
+}
+
+.login-final-card .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important; 
+    font-weight: 500;
+}
+.login-final-card .form-control::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.6) !important; 
+    font-weight: 500;
+}
+.login-final-card .form-control::-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.6) !important; 
+    font-weight: 500;
+}
+
+.btn-login-attractive {
+    background-color: var(--color-info) !important;
+    border-color: var(--color-info) !important;
+    color: var(--color-dark-secondary) !important;
+    font-weight: bold;
+    box-shadow: none !important; 
+    transition: all 0.3s ease;
+}
+
+.btn-login-attractive:hover {
+    box-shadow: 0 0 10px rgba(13, 202, 240, 0.2); 
+    transform: scale(1.01);
+}
+
+/* ========================================================================= */
+/* 8. RESPONSIVE FIXES FOR LOGIN PAGE */
+/* ========================================================================= */
+@media (max-width: 768px) {
+    .login-container-wrapper {
+        padding: 20px 15px;
+        align-items: flex-start;
+    }
+    
+    .login-final-card {
+        margin-top: 40px;     }
+}
+
+@media (max-width: 576px) {
+    .login-container-wrapper {
+        padding: 15px 10px;
+    }
+    
+    .login-final-card {
+        margin-top: 30px;
+        padding: 1.5rem !important;
+    }
+}
+
+.container, .container-fluid {
+    overflow-x: hidden;
+    min-height: auto;
+}
