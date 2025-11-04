@@ -867,8 +867,6 @@ body {
   font-size: 1.1rem;
   line-height: 1.6;
 }
-[file name]: index.css
-/* اضافه کردن این استایل‌ها به انتهای فایل */
 
 /* 📱 RESPONSIVE FIXES FOR MOBILE */
 @media (max-width: 768px) {
