@@ -867,3 +867,150 @@ body {
   font-size: 1.1rem;
   line-height: 1.6;
 }
+[file name]: index.css
+/* اضافه کردن این استایل‌ها به انتهای فایل */
+
+/* 📱 RESPONSIVE FIXES FOR MOBILE */
+@media (max-width: 768px) {
+  /* بهبود هدر برای موبایل */
+  .navbar-brand svg {
+    width: 140px !important;
+    height: 35px !important;
+  }
+  
+  .navbar-nav {
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .navbar-nav .nav-link {
+    margin: 5px 0 !important;
+    font-size: 1.1rem !important;
+  }
+  
+  /* بهبود کارت‌ها برای موبایل */
+  .card-glass, .app-card-glass {
+    margin: 10px !important;
+    border-radius: 12px !important;
+  }
+  
+  .card-body {
+    padding: 1rem !important;
+  }
+  
+  /* بهبود دکمه‌ها */
+  .btn {
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  /* بهبود صفحه Home */
+  .home-glass-card {
+    margin: 10px !important;
+    padding: 1.5rem !important;
+  }
+  
+  .home-title {
+    font-size: 1.8rem !important;
+  }
+  
+  .home-buttons {
+    flex-direction: column;
+    gap: 1rem !important;
+  }
+  
+  .home-buttons a {
+    width: 100%;
+  }
+  
+  /* بهبود صفحه Users */
+  .row {
+    margin: 0 !important;
+  }
+  
+  .col-lg-4, .col-md-6 {
+    padding: 0 5px !important;
+    margin-bottom: 15px !important;
+  }
+  
+  /* بهبود صفحه ShowUser */
+  .user-info-item {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 5px;
+  }
+  
+  .user-info-item strong {
+    margin-bottom: 2px;
+  }
+  
+  /* بهبود فرم‌ها */
+  .form-control {
+    font-size: 16px !important; /* جلوگیری از zoom در iOS */
+  }
+  
+  /* بهبود navigation دکمه‌ها */
+  .d-flex.gap-2 {
+    flex-direction: column;
+    gap: 0.5rem !important;
+  }
+  
+  .d-flex.gap-2 .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  /* بهبود برای موبایل‌های کوچک */
+  .container, .container-fluid {
+    padding: 0 10px !important;
+  }
+  
+  .card-header .h4 {
+    font-size: 1.2rem !important;
+  }
+  
+  .card-header .btn {
+    font-size: 0.8rem !important;
+    padding: 0.4rem 0.8rem !important;
+  }
+  
+  /* بهبود نمایش کاربران */
+  .user-info-item {
+    padding: 0.3rem 0 !important;
+  }
+  
+  /* بهبود فونت‌ها */
+  body {
+    font-size: 14px;
+  }
+  
+  h1 { font-size: 1.8rem !important; }
+  h2 { font-size: 1.5rem !important; }
+  h3 { font-size: 1.3rem !important; }
+  h4 { font-size: 1.1rem !important; }
+}
+
+/* جلوگیری از horizontal scroll */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* بهبود touch experience برای موبایل */
+@media (hover: none) and (pointer: coarse) {
+  .btn, .nav-link, .card {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-control {
+    min-height: 44px;
+  }
+}
